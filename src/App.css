@@ -32,9 +32,11 @@ body {
   width: 90vw;
   height: 300px;
   background-color: blue;
-  /*display: grid;
+  /*
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;*/
+  grid-template-rows: 1fr 1fr;
+  */
 }
 
 /*
