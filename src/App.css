@@ -6,22 +6,19 @@
 */
 
 .main-window {
-  margin: 5vw;
-  width: 95vw;
+  width: 90vw;
   height: 300px;
   border: solid 3px red;
 }
 
 .item-window {
-  margin: 5vw;
-  width: 95vw;
+  width: 90vw;
   height: 300px;
   border: solid 3px green;
 }
 
 .stats-window {
-  margin: 5vw;
-  width: 95vw;
+  width: 90vw;
   height: 300px;
   border: solid 3px blue;
 }
