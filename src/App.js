@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <MainWindow />
 	  <ItemWindow />
+	  <StatsWindow />
     </div>
   );
 }
@@ -35,6 +36,17 @@ class ItemWindow extends React.Component {
   }
 }
 
+class StatsWindow extends React.Component {
+  constructor(props) {
+	super(props);
+  }
+  render() {
+    return(
+	  <div className="stats-window">
+	  </div>
+	)
+  }
+}
 
 
 export default App;

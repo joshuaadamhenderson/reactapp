@@ -37,8 +37,20 @@
   }
 }
 
-#MainWindow {
+.main-window {
   width: 100vw;
   height: 300px;
   border: solid 3px red;
+}
+
+.item-window {
+  width: 100vw;
+  height: 300px;
+  border: solid 3px green;
+}
+
+.stats-window {
+  width: 100vw;
+  height: 300px;
+  border: solid 3px blue;
 }
