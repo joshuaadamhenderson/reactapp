@@ -16,7 +16,7 @@ function App() {
 	  <ItemWindow />
 	  <StatsWindow />
     </div>
-  );
+  )
 }
 
 class MainWindow extends React.Component {
