@@ -38,12 +38,6 @@ class ItemWindow extends React.Component {
 class StatsWindow extends React.Component {
   constructor(props) {
 	super(props);
-	this.state = {
-	  playerLvl: 0,
-	  playerHP: 0,
-	  playerMaxHP: 0,
-	  playerGold: 0
-	}
   }
   render() {
     return(
