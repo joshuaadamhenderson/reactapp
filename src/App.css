@@ -38,16 +38,18 @@ body {
 	display: flex;
   }
   .main-window {
-	width: 48vw;
-	height: 100vh;
+	width: 50vw;
+	height: 95vh;
 	float: right;
   }
   .item-window {
-	width: 48vw;
+	width: 49vw;
+	height: 65vh;
 	float: left;
   }
   .stats-window {
-	width: 48vw;
+	height: 30vh;
+	width: 49vw;
 	float: left;
   }
 }
