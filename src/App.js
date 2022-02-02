@@ -18,7 +18,6 @@ class MainWindow extends React.Component {
   render() {
 	return(
 	  <div className="main-window">
-		TEST TEST TEST
 	  </div>
 	)
   }
