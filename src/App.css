@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 
-.App {
+.wrapper {
   border: solid 5px yellow;
   height: auto;
 }

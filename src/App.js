@@ -12,11 +12,24 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <MainWindow />
-	  <ItemWindow />
-	  <StatsWindow />
+	  <Wrapper />
     </div>
   )
+}
+
+class Wrapper extends React.Component {
+  constructor(props) {
+	super(props);
+  }
+  render() {
+	return(
+	  <div className="wrapper">
+        <MainWindow />
+	    <ItemWindow />
+	    <StatsWindow />
+	  </div>
+	)
+  }
 }
 
 class MainWindow extends React.Component {
