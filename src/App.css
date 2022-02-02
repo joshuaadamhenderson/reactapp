@@ -13,26 +13,26 @@ body {
 }
 
 .wrapper {
-  border: solid 5px yellow;
+  border: solid 5px #333;
   height: auto;
 }
 
 .main-window {
   width: 90vw;
   height: 300px;
-  background-color: red;
+  background-color: #ddd;
 }
 
 .item-window {
   width: 90vw;
   height: 300px;
-  background-color: green;
+  background-color: #ccc;
 }
 
 .stats-window {
   width: 90vw;
   height: 300px;
-  background-color: blue;
+  background-color: #bbb;
   /*
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -47,19 +47,27 @@ body {
   body {
 	display: flex;
   }
+  
+  .wrapper {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .leftBox {
+	display: flex;
+	flex-direction: column;
+  }
+  
   .main-window {
 	width: 68vw;
 	height: 95vh;
-	float: right;
   }
   .item-window {
 	width: 28vw;
 	height: 65vh;
-	float: left;
   }
   .stats-window {
 	height: 30vh;
 	width: 28vw;
-	float: left;
   }
 }

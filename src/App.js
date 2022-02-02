@@ -25,8 +25,10 @@ class Wrapper extends React.Component {
 	return(
 	  <div className="wrapper">
         <MainWindow />
-	    <ItemWindow />
-	    <StatsWindow />
+	    <div className="leftBox">
+		  <StatsWindow />
+	      <ItemWindow />
+		</div>
 	  </div>
 	)
   }
