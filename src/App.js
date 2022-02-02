@@ -24,11 +24,11 @@ class Wrapper extends React.Component {
   render() {
 	return(
 	  <div className="wrapper">
-        <MainWindow />
 	    <div className="leftBox">
 		  <StatsWindow />
 	      <ItemWindow />
 		</div>
+        <MainWindow />
 	  </div>
 	)
   }
@@ -61,10 +61,19 @@ class ItemWindow extends React.Component {
 class StatsWindow extends React.Component {
   constructor(props) {
 	super(props);
+	this.state = {
+	  playerLevel: 0,
+	  playerHP: 0,
+	  playerMaxHP: 0,
+	  playerGold: 0
+	};
   }
   render() {
     return(
 	  <div className="stats-window">
+	    <span>LEVEL </span>{this.state.playerLevel}
+		<span>HP </span>{this.state.playerHP} / {this.state.playerMaxHP}
+		<span>GOLD </span>{this.state.playerGold}
 	  </div>
 	)
   }
