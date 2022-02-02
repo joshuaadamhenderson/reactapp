@@ -50,7 +50,6 @@ class StatsWindow extends React.Component {
   render() {
     return(
 	  <div className="stats-window">
-		{this.props.
 	  </div>
 	)
   }
