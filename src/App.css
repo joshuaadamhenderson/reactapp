@@ -5,6 +5,13 @@
   Last Modified:	2/1/22
 */
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-window {
   width: 90vw;
   height: 300px;
