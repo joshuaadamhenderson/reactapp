@@ -15,19 +15,19 @@ body {
 .main-window {
   width: 90vw;
   height: 300px;
-  border: solid 3px red;
+  background-color: red;
 }
 
 .item-window {
   width: 90vw;
   height: 300px;
-  border: solid 3px green;
+  background-color: green;
 }
 
 .stats-window {
   width: 90vw;
   height: 300px;
-  border: solid 3px blue;
+  background-color: blue;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
