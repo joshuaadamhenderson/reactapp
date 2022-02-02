@@ -71,9 +71,9 @@ class StatsWindow extends React.Component {
   render() {
     return(
 	  <div className="stats-window">
-	    <span>LEVEL </span>{this.state.playerLevel}
-		<span>HP </span>{this.state.playerHP} / {this.state.playerMaxHP}
-		<span>GOLD </span>{this.state.playerGold}
+	    <span>LEVEL </span><span>{this.state.playerLevel}</span>
+		<span>HP </span><span>{this.state.playerHP} / {this.state.playerMaxHP}</span>
+		<span>GOLD </span><span>{this.state.playerGold}</span>
 	  </div>
 	)
   }
