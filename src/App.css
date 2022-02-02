@@ -14,6 +14,7 @@ body {
 
 .App {
   border: solid 5px yellow;
+  height: auto;
 }
 
 .main-window {
