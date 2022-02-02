@@ -12,6 +12,10 @@ body {
   align-items: center;
 }
 
+.App {
+  border: solid 5px yellow;
+}
+
 .main-window {
   width: 90vw;
   height: 300px;
@@ -41,18 +45,18 @@ body {
 	display: flex;
   }
   .main-window {
-	width: 48vw;
+	width: 68vw;
 	height: 95vh;
 	float: right;
   }
   .item-window {
-	width: 48vw;
+	width: 28vw;
 	height: 65vh;
 	float: left;
   }
   .stats-window {
 	height: 30vh;
-	width: 48vw;
+	width: 28vw;
 	float: left;
   }
 }
