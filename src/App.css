@@ -2,7 +2,7 @@
   Author:			Joshua Henderson
   Project:			My Game
   Created:			2/1/22
-  Last Modified:	2/1/22
+  Last Modified:	2/2/22
 */
 
 body {
@@ -36,12 +36,16 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
 }
 
-.stats-window span {
+.stats-window span.left {
   justify-self: start;
   padding: 5px;
-  border: solid 5px #aaa;
+}
+.stats-window span.right {
+  justify-self: end;
+  padding: 5px;
 }
 
 /*
