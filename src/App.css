@@ -6,21 +6,21 @@
 */
 
 .main-window {
-  margin: 10px;
+  margin: 5vw;
   width: 95vw;
   height: 300px;
   border: solid 3px red;
 }
 
 .item-window {
-  margin: 10px;
+  margin: 5vw;
   width: 95vw;
   height: 300px;
   border: solid 3px green;
 }
 
 .stats-window {
-  margin: 10px;
+  margin: 5vw;
   width: 95vw;
   height: 300px;
   border: solid 3px blue;
