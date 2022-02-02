@@ -34,13 +34,18 @@ body {
   Desktop Settings
 */
 @media only screen and (min-width: 768px) {
+  body {
+	display: flex;
+  }
   .main-window {
 	width: 48vw;
   }
   .item-window {
 	width: 48vw;
+	float: left;
   }
   .stats-window {
 	width: 48vw;
+	float: left;
   }
 }
