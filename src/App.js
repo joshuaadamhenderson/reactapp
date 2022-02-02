@@ -9,18 +9,14 @@
 import React from 'react';
 import './App.css';
 
-
-class App extends React.Component {
-  constructor(props) {
-	super(props);
-  }
-  render() {
-	<div>
+function App() {
+  return (
+    <div className="App">
       <MainWindow />
 	  <ItemWindow />
 	  <StatsWindow />
-	</div>
-  }
+    </div>
+  );
 }
 
 class MainWindow extends React.Component {
