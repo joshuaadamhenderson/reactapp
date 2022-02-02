@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+#MainWindow {
+  width: 100vw;
+  height: 300px;
+  border: solid 3px red;
+}
