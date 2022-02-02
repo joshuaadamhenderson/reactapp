@@ -1,14 +1,26 @@
+/*
+  Author:			Joshua Henderson
+  Project:			My Game
+  Created:			2/1/22
+  Last Modified:	2/1/22
+*/
+
+
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+
+class App extends React.Component {
+  constructor(props) {
+	super(props);
+  }
+  render() {
+	<div>
       <MainWindow />
 	  <ItemWindow />
 	  <StatsWindow />
-    </div>
-  );
+	</div>
+  }
 }
 
 class MainWindow extends React.Component {
@@ -42,6 +54,7 @@ class StatsWindow extends React.Component {
   render() {
     return(
 	  <div className="stats-window">
+		{this.props.
 	  </div>
 	)
   }

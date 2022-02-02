@@ -28,6 +28,9 @@ body {
   width: 90vw;
   height: 300px;
   border: solid 3px blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 /*
@@ -38,18 +41,18 @@ body {
 	display: flex;
   }
   .main-window {
-	width: 50vw;
+	width: 48vw;
 	height: 95vh;
 	float: right;
   }
   .item-window {
-	width: 49vw;
+	width: 48vw;
 	height: 65vh;
 	float: left;
   }
   .stats-window {
 	height: 30vh;
-	width: 49vw;
+	width: 48vw;
 	float: left;
   }
 }
