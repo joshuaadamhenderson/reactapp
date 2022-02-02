@@ -40,6 +40,8 @@ body {
 
 .stats-window span {
   justify-self: start;
+  padding: 5px;
+  border: solid 5px #aaa;
 }
 
 /*
