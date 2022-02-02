@@ -1,20 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
+      <MainWindow />
     </div>
   );
 }
 
-export default App;
+class MainWindow extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return(
+			<div id="mainWindow">
+				TEST TEST TEST
+			</div>
+		)
+	}
+}
 
-/*
-Test
-*/
+
+
+
+export default App;
