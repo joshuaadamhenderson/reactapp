@@ -39,6 +39,8 @@ body {
   }
   .main-window {
 	width: 48vw;
+	height: 100vh;
+	float: right;
   }
   .item-window {
 	width: 48vw;
