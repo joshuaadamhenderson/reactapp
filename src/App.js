@@ -5,10 +5,9 @@
   Last Modified:	2/1/22
 */
 
-
 import React from 'react';
 import './App.css';
-
+import { locations } from "./mapData"
 
 function App() {
   return (
@@ -18,56 +17,153 @@ function App() {
   )
 }
 
+console.log(locations)
+let currentOptionWindow = [];
+
 class Wrapper extends React.Component {
   constructor(props) {
-	super(props);
+    super(props);
   }
   render() {
-	return(
-	  <div className="wrapper">
-	    <div className="leftBox">
-		  <StatsWindow />
-	      <ItemWindow />
-		</div>
+    return(
+      <div className="wrapper">
+        <div className="leftBox">
+          <StatsWindow />
+          <ItemWindow />
+        </div>
         <MainWindow />
-	  </div>
-	)
+      </div>
+    )
   }
 }
 
-class MainWindow extends React.Component {
+class Option extends React.Component {
   constructor(props) {
-	super(props);
+    super(props);
   }
   render() {
-	return(
-	  <div className="main-window">
-	  </div>
-	)
+    return(
+      <div>
+        <button className="option">OPTION</button>
+      </div>
+    )
+  }
+}
+
+class OptionWindow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+      <div
+        id="option-window"
+        >
+        <Option />
+      </div>
+    )
+  }
+}
+
+class Message extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+      <div className="message">
+        <span>
+          {this.props.message}
+        </span>
+      </div>
+    )
+  }
+}
+
+
+
+class MainWindow extends React.Component {
+  constructor(props) {
+	  super(props);
+  }
+  render() {
+    
+    return(
+      <div className="main-window">
+        <h1></h1>
+        <Message message="You picked up a small health potion." />
+        <Message message="You are in a small cove."/>
+        <Message message="You awaken."/>
+        <OptionWindow />
+      </div>
+    )
+  }
+}
+
+class Item extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+      <div className="item">
+        <div className="item-main">
+          <div>
+            <span className="item-name">{this.props.itemName}</span> <span><i class={this.props.itemIcon}></i></span>
+          </div>
+          <div>
+            <button id="useItem"><i class="fa fa-check"></i></button>
+            <button id="deleteItem"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+        <div className="item-info">
+          {this.props.itemInfo}
+        </div>
+      </div>
+    )
   }
 }
 
 class ItemWindow extends React.Component {
   constructor(props) {
-	super(props);
+    super(props);
+    this.state = {
+      currentItems: []
+    }
+    this.getCurrentItems = this.getCurrentItems.bind(this);
+  }
+  getCurrentItems() {
+    /* Retrieve item IDs from storage */
+  }
+  addItem() {
+    /* Add a new item to the list */
+  }
+  removeItem() {
+    /* Delete an existing item from the list */
   }
   render() {
     return(
-	  <div className="item-window">
-	  </div>
-	)
+      <div className="item-window">
+        <Item
+          itemName='Item 1'
+          itemIcon='fa fa-flask'
+          itemInfo='This is an important item.'
+          />
+        <Item itemName='Item 2'/>
+      </div>
+	  )
   }
 }
 
 class StatsWindow extends React.Component {
   constructor(props) {
-	super(props);
-	this.state = {
-	  playerLevel: 0,
-	  playerHP: 0,
-	  playerMaxHP: 0,
-	  playerGold: 0
-	};
+	  super(props);
+    this.state = {
+      playerLevel: 1,
+      playerHP: 100,
+      playerMaxHP: 100,
+      playerGold: 0
+    };
   }
   render() {
     return(
@@ -80,5 +176,4 @@ class StatsWindow extends React.Component {
   }
 }
 
-
-export default App;
+ReactDOM.render(<Wrapper />, document.getElementById('app'));

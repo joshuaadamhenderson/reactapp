@@ -5,7 +5,7 @@
   Last Modified:	2/2/22
 */
 
-/* Custom colors
+/* Custom colors */
 $snow-flurry: #e5fcc2;
 $dead-99: #9de0ad;
 $verdigris: #45ada8;
@@ -20,8 +20,6 @@ $main-window-color: #fff8dc;
 $button-color: $dead-99;
 $button-border-color: $ocean-current;
 
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +30,8 @@ body {
 }
 
 .wrapper {
-  background-color: #3e2723;
+  background-color: $wrapper-color;
+  //border: solid 3px $wrapper-border;
   padding: 10px;
   border-radius: 8px;
   margin-top: 8px;
@@ -40,7 +39,8 @@ body {
 .main-window {
   width: 90vw;
   height: 300px;
-  background-color: #fff8dc;
+  background-color: $main-window-color;
+  //border: solid 2px white;
   box-shadow: inset 2px 2px 12px 1px #444;
   display: flex;
   flex-direction: column;
@@ -92,41 +92,38 @@ body {
   background-color: #444;
   padding: 15px;
 }
-	
-}
+
 .item {
-  background-color: #f5d6b1;
-  //border: solid 3px #000;
+  background-color: $item-color;
+  //border: solid 3px $item-border;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 1px #111;
   padding: 3px 3px 3px 10px;
   margin: 0px 6px 12px 6px;
+  button {
+    padding: 8px;
+    margin: 5px;
+    box-shadow: 2px 2px 3px 0px #555;
+    background-color: $button-color;
+    pointer: cursor;
+    border: none;
+    border-radius: 5px;
+    min-height: 40px;
+    min-width: 40px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &#useItem {
+      background-color: #005c12;
+    }
+    &#deleteItem {
+      background-color: #8a2424;
+    }
+    i {
+      color: white;
+    }
+  }
 }
-
-.item button {
-  padding: 8px;
-  margin: 5px;
-  box-shadow: 2px 2px 3px 0px #555;
-  pointer: cursor;
-  border: none;
-  border-radius: 5px;
-  min-height: 40px;
-  min-width: 40px;
-}
-.item button:hover {
-  opacity: 0.8;
-}
-	
-#useItem {
-  background-color: #005c12;
-}
-#deleteItem {
-  background-color: #8a2424;
-}
-i {
-  color: white;
-}
-
 .item-name {
   font-weight: bold;
 }
@@ -135,6 +132,13 @@ i {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.item-info {
+  
+}
+
+.item button {
 }
 
 /*
