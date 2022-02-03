@@ -9,6 +9,11 @@ import React from 'react';
 import './App.css';
 import { locations } from "./mapData"
 
+
+
+
+
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +22,6 @@ function App() {
   )
 }
 
-console.log(locations)
 let currentOptionWindow = [];
 
 class Wrapper extends React.Component {
@@ -87,12 +91,10 @@ class MainWindow extends React.Component {
 	  super(props);
   }
   render() {
-    
     return(
       <div className="main-window">
-        <h1>Hello</h1>
         <Message message="You picked up a small health potion." />
-        <Message message="You are in a small cove."/>
+        <Message message="" />
         <Message message="You awaken."/>
         <OptionWindow />
       </div>
