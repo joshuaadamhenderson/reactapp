@@ -175,3 +175,5 @@ class StatsWindow extends React.Component {
 	)
   }
 }
+
+export default App;
