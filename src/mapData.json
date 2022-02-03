@@ -1,7 +1,11 @@
 {
 	"locations":
 	[
-		"location": "one",
-		"location": "two"
+		{
+			"location": "one"
+		},
+		{
+			"location": "two"
+		}
 	]
 }
