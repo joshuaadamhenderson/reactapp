@@ -1,4 +1,8 @@
-export const locations = {
-	"name": "one",
-	"name": "two"
-}
+export const locations = [
+	{
+		name: "one"
+	},
+	{
+		name: "two"
+	}
+];
