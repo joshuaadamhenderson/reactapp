@@ -175,5 +175,3 @@ class StatsWindow extends React.Component {
 	)
   }
 }
-
-ReactDOM.render(<Wrapper />, document.getElementById('app'));
