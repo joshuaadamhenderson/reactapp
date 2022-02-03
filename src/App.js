@@ -90,7 +90,7 @@ class MainWindow extends React.Component {
     
     return(
       <div className="main-window">
-        <h1></h1>
+        <h1>{locations[0]}</h1>
         <Message message="You picked up a small health potion." />
         <Message message="You are in a small cove."/>
         <Message message="You awaken."/>
