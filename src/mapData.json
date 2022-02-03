@@ -4,9 +4,15 @@
 		{
 			"locationName": "map1scene1",
 			"locationOptions": [
-				"option": "North",
-				"option": "West"
+				{
+					"option": "North",
+					"newLocation": "map1scene3"
+				},
+				{
+					"option": "West",
+					"newLocation": "map1scene2"
+				}
 			]
-		},
+		}
 	]
 }
