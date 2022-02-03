@@ -1,0 +1,12 @@
+{
+	"locations":
+	[
+		{
+			"locationName": "map1scene1",
+			"locationOptions": [
+				"option": "North",
+				"option": "West"
+			]
+		},
+	]
+}
