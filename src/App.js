@@ -2,17 +2,12 @@
   Author:			Joshua Henderson
   Project:			My Game
   Created:			2/1/22
-  Last Modified:	2/1/22
+  Last Modified:	2/3/22
 */
 
 import React from 'react';
 import './App.css';
-import { locations } from "./mapData"
-
-
-
-
-
+import { maps } from "./mapData"
 
 function App() {
   return (
@@ -22,20 +17,32 @@ function App() {
   )
 }
 
-let currentOptionWindow = [];
-
 class Wrapper extends React.Component {
   constructor(props) {
     super(props);
+	this.state = {
+	  currentMap: maps[0],
+	  messageArr: []
+	}
+	this.changeMap = this.changeMap.bind(this);
+  }
+  changeMap() {
+	this.setState(prevState => ({
+	  currentMap: maps[1],
+	  messageArr: [...prevState.messageArr, this.state.currentMap.message]
+	}))
+	if (this.state.messageArr.length > 4) {
+	  this.state.messageArr.shift();
+	}
   }
   render() {
     return(
       <div className="wrapper">
         <div className="leftBox">
-          <StatsWindow />
+          <StatsWindow currentMap={this.state.currentMap}/>
           <ItemWindow />
         </div>
-        <MainWindow />
+        <MainWindow messages={this.state.messageArr} currentMap={this.state.currentMap} changeMap={this.changeMap}/>
       </div>
     )
   }
@@ -45,46 +52,67 @@ class Option extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return(
-      <div>
-        <button className="option">OPTION</button>
+	  <div>
+		<button
+		  id={this.props.id}
+		  onClick={this.props.changeMap}
+		  className="option"
+		  >
+		  {this.props.display}
+		</button>
       </div>
-    )
+	)
   }
 }
 
 class OptionWindow extends React.Component {
   constructor(props) {
     super(props);
+
   }
   render() {
     return(
       <div
         id="option-window"
         >
-        <Option />
+		{this.props.currentMap.choices.map((data, key)=> {
+		  return (
+		    <Option
+			  changeMap={this.props.changeMap}
+			  id={this.props.currentMap.mapID}
+			  nextMap={data.result}
+			  display={data.choice}
+			  key={key}
+			  />
+		  )
+		})}
       </div>
     )
   }
 }
 
-class Message extends React.Component {
+
+
+class MessageWindow extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return(
-      <div className="message">
-        <span>
-          {this.props.message}
-        </span>
+      <div className="message-window">
+		{this.props.messages.map((data, key) => {
+		  return (
+		    <p className="message" key={key}>{data}</p>
+		  )
+		})}
       </div>
     )
   }
 }
-
-
 
 class MainWindow extends React.Component {
   constructor(props) {
@@ -93,10 +121,8 @@ class MainWindow extends React.Component {
   render() {
     return(
       <div className="main-window">
-        <Message message="You picked up a small health potion." />
-        <Message message="" />
-        <Message message="You awaken."/>
-        <OptionWindow />
+        <MessageWindow messages={this.props.messages} currentMap={this.props.currentMap}/>
+        <OptionWindow currentMap={this.props.currentMap} changeMap={this.props.changeMap}/>
       </div>
     )
   }
@@ -173,6 +199,7 @@ class StatsWindow extends React.Component {
 	    <span class="left">LEVEL </span><span class="right">{this.state.playerLevel}</span>
 		<span class="left">HP </span><span class="right">{this.state.playerHP} / {this.state.playerMaxHP}</span>
 		<span class="left">GOLD </span><span class="right">{this.state.playerGold}</span>
+		<span class="left">MAP </span><span class="right">{this.props.currentMap.mapID}</span>
 	  </div>
 	)
   }

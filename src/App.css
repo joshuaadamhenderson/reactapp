@@ -2,7 +2,7 @@
   Author:			Joshua Henderson
   Project:			My Game
   Created:			2/1/22
-  Last Modified:	2/2/22
+  Last Modified:	2/3/22
 */
 
 /* Custom colors
@@ -25,6 +25,7 @@ $button-border-color: $ocean-current;
 * {
   margin: 0;
   padding: 0;
+  font-family: Calibri, sans-serif;
 }
 body {
   display: flex;
@@ -79,16 +80,29 @@ body {
 }
 
 .option {
-  border: none;
+  border: solid 5px #555;
   padding: 20px;
   width: 12vw;
-  font-size: 1.2em;
+  font-size: 1.4em;
   border-radius: 5px;
+  background-color: #333;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0px 12px 0px 12px;
+}
+
+.option:hover {
+  opacity: 0.8;
+  border: solid 5px yellow;
+  color: yellow;
 }
 
 #option-window {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #444;
   padding: 15px;
 }
@@ -106,7 +120,7 @@ body {
   padding: 8px;
   margin: 5px;
   box-shadow: 2px 2px 3px 0px #555;
-  pointer: cursor;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   min-height: 40px;
